@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2026 at 04:11 PM
+-- Generation Time: Sep 26, 2026 at 04:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,6 +39,31 @@ CREATE TABLE `attendance_logs` (
   `log_date` date DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedules`
+--
+
+CREATE TABLE `schedules` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `hours` varchar(50) DEFAULT NULL,
+  `late_after` varchar(20) DEFAULT NULL,
+  `scan_window` varchar(100) DEFAULT NULL,
+  `available_days` varchar(50) DEFAULT NULL,
+  `assignments` varchar(100) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `schedules`
+--
+
+INSERT INTO `schedules` (`id`, `name`, `hours`, `late_after`, `scan_window`, `available_days`, `assignments`, `status`) VALUES
+(1, 'Tuesday AB202', '', '15', '60 min before 120 min after', 'Tue,Thu', 'BSCS 2B - 30 people', 'Active'),
+(2, 'Thursday CL1', '', '15', '60 min before 120 min after', 'Tue,Thu', 'BSCS 2B - 30 people', 'Active');
 
 -- --------------------------------------------------------
 
@@ -123,6 +148,12 @@ ALTER TABLE `attendance_logs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `schedules`
+--
+ALTER TABLE `schedules`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
@@ -144,6 +175,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `attendance_logs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `schedules`
+--
+ALTER TABLE `schedules`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `students`
