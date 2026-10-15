@@ -320,7 +320,7 @@ $users = $conn->query("SELECT * FROM users ORDER BY id DESC");
             </div>
 
             <div class="grid">
-                // FORM SECTION
+                
                 <div class="card">
                     <div class="card-head"><?php echo $edit_data ? 'Edit User' : 'Add New User'; ?></div>
                     <div class="card-body">
@@ -349,7 +349,7 @@ $users = $conn->query("SELECT * FROM users ORDER BY id DESC");
                     </div>
                 </div>
 
-                // LIST SECTION
+                
                 <div class="card">
                     <div class="card-head" style="border-top:3px solid #fff">Users List</div>
                     <div style="overflow-x:auto">

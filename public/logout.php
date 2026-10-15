@@ -453,7 +453,7 @@ if (isset($_GET['confirm']) && $_GET['confirm'] == '1') {
         </div>
 
         <div class="content">
-            //LAMP GITNA 
+            
             <div class="lamp-center">
                 <div class="shade"></div>
                 <div class="bulb"></div>
@@ -464,7 +464,7 @@ if (isset($_GET['confirm']) && $_GET['confirm'] == '1') {
                     <div class="pull-line"></div>
                 </div>
             </div>
-            // FIREFLIES 
+            
             <div class="firefly" style="left:20%;top:65%;animation-delay:0s"></div>
             <div class="firefly" style="left:35%;top:70%;animation-delay:0.5s;width:4px;height:4px"></div>
             <div class="firefly" style="left:55%;top:68%;animation-delay:1s"></div>

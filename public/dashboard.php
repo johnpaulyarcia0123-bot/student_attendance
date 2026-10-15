@@ -22,7 +22,7 @@ function getScheduleForDate($conn, $date_str)
 }
 
 
-// DASHBOARD STATISTICS - IMPORTANT
+
 
 $total_students = $conn->query("SELECT COUNT(*) as c FROM students")->fetch_assoc()['c'] ?? 0;
 $present_today = $conn->query("SELECT COUNT(*) as c FROM attendance_logs WHERE DATE(time_in)=CURDATE()")->fetch_assoc()['c'] ?? 0;
@@ -387,7 +387,7 @@ if ($today_sched) {
             <h2 style="font-weight:400;margin-bottom:15px;font-size:22px">Dashboard <span
                     style="float:right;font-size:12px;color:#777;margin-top:8px"><?php echo $sched_banner; ?> |
                     <?php echo date('h:i A'); ?></span></h2>
-            // STAT CARDS  IMPORTANT
+            
             <div class="cards">
                 <a href="students.php" class="card-stat bg-aqua">
                     <div class="inner">
@@ -423,7 +423,7 @@ if ($today_sched) {
                     <div class="footer">View absences <i class="fa-solid fa-circle-arrow-right"></i></div>
                 </a>
             </div>
-            // CHART AND INFO BOXES 
+            
             <div class="row">
                 <div class="box">
                     <div class="box-head">7-Day Attendance Overview <a href="scanner.php" class="btn-blue"><i
@@ -475,7 +475,7 @@ if ($today_sched) {
                     </div>
                 </div>
             </div>
-            // RECENT ATTENDANCE TABLE  IMPORTANT 
+           
             <div class="box">
                 <div class="box-head">Recent Attendance <a href="attendance_logs.php"
                         style="font-size:11px;color:#3c8dbc;text-decoration:none">View all</a></div>

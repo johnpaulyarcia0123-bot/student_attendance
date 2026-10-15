@@ -344,7 +344,7 @@ $schedules = $conn->query("SELECT * FROM schedules ORDER BY id DESC");
             </div>
 
             <div class="grid">
-                // FORM SECTION - add/edit schedule 
+                
                 <div class="card">
                     <div class="card-head"><?php echo $edit_data ? 'Edit Schedule' : 'New Schedule'; ?></div>
                     <div class="card-body">
@@ -365,7 +365,7 @@ $schedules = $conn->query("SELECT * FROM schedules ORDER BY id DESC");
                     </div>
                 </div>
 
-                //LIST SECTION  display schedules 
+
                 <div class="card">
                     <div class="card-head" style="border-top:3px solid #fff">Schedules List</div>
                     <div>

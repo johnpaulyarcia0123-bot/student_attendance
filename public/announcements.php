@@ -307,7 +307,7 @@ $announcements = $conn->query("SELECT * FROM announcements ORDER BY id DESC");
 
 <body>
     <div class="sidebar">
-        // SYSTEM LOGO
+
         <div class="logo"><i class="fa-solid fa-graduation-cap"></i> SAS</div>
         <div class="profile">
             <div
@@ -359,7 +359,7 @@ $announcements = $conn->query("SELECT * FROM announcements ORDER BY id DESC");
             </div>
 
             <div class="grid">
-                // LEFT FORM
+                
                 <div class="card">
                     <div class="card-head">New Announcement</div>
                     <div class="card-body">
@@ -400,7 +400,7 @@ $announcements = $conn->query("SELECT * FROM announcements ORDER BY id DESC");
                     </div>
                 </div>
 
-                //RIGHT LIST 
+                
                 <div class="card">
                     <div class="card-head" style="border-top:3px solid #fff">System Announcements</div>
                     <div id="annList">
